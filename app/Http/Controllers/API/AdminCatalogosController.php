@@ -110,7 +110,7 @@ class AdminCatalogosController extends Controller
 
         if(sizeof($menu)>0){
 
-            return json_encode($menu[0]);
+            return json_encode(json_decode($menu[0]->menu));
         }else{
             $response['status_msg'] = 'No existe un menú registrado para esa unidad';
             return json_encode($response);

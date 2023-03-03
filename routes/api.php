@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AdminCatalogosController;
+use App\Http\Controllers\MiddlewareServices\Accounts;
 use App\Http\Controllers\MiddlewareServices\CustomersData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('menus',AdminCatalogosController::class);
 Route::apiResource('customers',CustomersData::class);
+Route::apiResource('accounts',Accounts::class);
